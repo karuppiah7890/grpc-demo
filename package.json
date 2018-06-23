@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@grpc/proto-loader": "^0.1.0",
+    "grpc": "^1.12.4"
+  },
+  "name": "grpc-demo",
+  "version": "1.0.0",
+  "description": "Demo to try out gRPC with NodeJS gRPC client and Golang gRPC server",
+  "main": "grpc_client.js",
+  "repository": "https://github.com/karuppiah7890/grpc-demo",
+  "author": "Karuppiah <karuppiah7890@gmail.com>",
+  "license": "MIT"
+}

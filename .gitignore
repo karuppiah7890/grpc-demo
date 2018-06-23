@@ -1,0 +1,8 @@
+# NodeJs modules
+node_modules/
+
+$ VS Code config
+.vscode/
+
+# Binary
+grpc-demo
