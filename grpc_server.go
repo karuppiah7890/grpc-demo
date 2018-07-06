@@ -31,7 +31,6 @@ func main() {
 		log.Fatalf("failed to listen: %v", err)
 	}
 	grpcServer := grpc.NewServer()
-	// .RegisterRouteGuideServer(grpcServer, newServer())
 	addition.RegisterAdditionServer(grpcServer, newAddServer())
 	grpcServer.Serve(lis)
 }
