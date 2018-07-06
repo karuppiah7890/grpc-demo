@@ -10,13 +10,16 @@ Below are the steps (at a high level) that I followed to code the demo
 
 ## Steps
 
-1.  Create the `.proto` file with service definition and message types
-2.  Generate source code from the `.proto` file for Golang using this command:
+1.  Get protoc binary [here](https://github.com/google/protobuf/releases) and install protoc compiler plugin for golang, using
+    `$ go get -u github.com/golang/protobuf/protoc-gen-go`
 
-`$ protoc -I addition addition/addition.proto --go_out=plugins=addition`
+2.  Create the `.proto` file with service definition and message types
+3.  Generate source code from the `.proto` file for Golang using this command:
 
-3.  Code the Go gRPC server's Addition service by implementing the service interface auto generated in step 2
-4.  Code the NodeJs gRPC client by dynamically loading the `.proto` file and obtaining the client stub, then making calls to gRPC server
+    `$ protoc -I addition addition/addition.proto --go_out=plugins=grpc:addition`
+
+4.  Code the Go gRPC server's Addition service by implementing the service interface auto generated in step 2
+5.  Code the NodeJs gRPC client by dynamically loading the `.proto` file and obtaining the client stub, then making calls to gRPC server
 
 ## Running the server and client
 
